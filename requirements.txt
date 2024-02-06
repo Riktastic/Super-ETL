@@ -1,0 +1,10 @@
+modin
+openpyxl
+pyarrow
+psycopg2-binary
+mysql-connector-python
+mariadb
+elasticsearch
+cbsodata
+lxml
+boto3
