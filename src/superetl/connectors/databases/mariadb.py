@@ -22,7 +22,7 @@ def create_connection(host, port, user, password):
         connection = mariadb.connect(host=host,
                                             port=port,
                                             user=user,
-                                            password=password)        
+                                            password=password)
     except mariadb.Error as error:
         print(f"Error while connecting to MariaDB: {error}")
     else:
@@ -38,7 +38,7 @@ def check_table(connection,database,table):
             FROM
                 information_schema.TABLES
             WHERE
-                TABLE_SCHEMA = {table}   
+                TABLE_SCHEMA = {table}
             );
             """
         cursor.execute(sql)
@@ -70,7 +70,7 @@ def create_database(connection, database):
         log(f"MariaDB: Failed to create database [{database}]: {error}", "error")
     else:
         cursor.commit()
-        cursor.close()      
+        cursor.close()
 
 def create_table(connection, create_table_sql):
     try:
