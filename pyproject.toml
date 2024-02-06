@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "superetl"
+name = "super-etl"
 dynamic = ["version"]
 description = ''
 readme = "README.md"
@@ -38,12 +38,12 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/unknown/superetl#readme"
-Issues = "https://github.com/unknown/superetl/issues"
-Source = "https://github.com/unknown/superetl"
+Documentation = "https://github.com/Riktastic/Super-ETL#readme"
+Issues = "https://github.com/Riktastic/Super-ETL/issues"
+Source = "https://github.com/Riktastci/Super-ETL"
 
 [tool.hatch.version]
-path = "src/superetl/__about__.py"
+path = "src/super-etl/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -70,19 +70,19 @@ dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/superetl tests}"
+check = "mypy --install-types --non-interactive {args:src/super-etl tests}"
 
 [tool.coverage.run]
-source_pkgs = ["superetl", "tests"]
+source_pkgs = ["super-etl", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/superetl/__about__.py",
+  "src/super-etl/__about__.py",
 ]
 
 [tool.coverage.paths]
-superetl = ["src/superetl", "*/superetl/src/superetl"]
-tests = ["tests", "*/superetl/tests"]
+super-etl = ["src/super-etl", "*/super-etl/src/super-etl"]
+tests = ["tests", "*/super-etl/tests"]
 
 [tool.coverage.report]
 exclude_lines = [
